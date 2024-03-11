@@ -1,0 +1,18 @@
+# jedis或lettuce配置相关
+# spring:
+#   data:
+#     redis:
+#       host: localhost
+#       port: 6379
+#       client-type: jedis # 可以通过该配置设置使用指定的redis client，配置项有lettuce,jedis，默认为lettuce
+#       jedis:
+#         pool:
+#           max-idle: 16
+#           max-active: 32
+#           min-idle: 8
+
+# Redission配置相关
+spring:
+  redis:
+    redission:
+      file: classpath:redission.yaml
