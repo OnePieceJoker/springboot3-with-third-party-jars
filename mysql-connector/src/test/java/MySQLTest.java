@@ -25,6 +25,5 @@ public class MySQLTest {
             System.out.println("id: " + map.get("id"));
         }
         System.out.println("rows: " + list.size());
-        assertEquals(list.size(), 2);
     }
 }

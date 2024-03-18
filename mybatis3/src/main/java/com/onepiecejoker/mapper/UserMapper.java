@@ -15,7 +15,7 @@ public interface UserMapper {
     @Select("select * from user")
     List<User> selectAll();
 
-    User selectById(Integer id);
+    User selectById(Long id);
 
     @Insert("insert into user(id) values(#{id})")
     void insert(User user);

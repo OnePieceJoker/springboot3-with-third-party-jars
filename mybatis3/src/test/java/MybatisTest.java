@@ -24,16 +24,19 @@ public class MybatisTest {
 
     @Test
     public void testQueryUserById() {
-        User user = userMapper.selectById(1);
-        assertEquals(user.getId(), 1);
+        User user = userMapper.selectById(1L);
+        assertEquals(user.getId(), 1L);
     }
 
     @Test
     public void testInsertUser() {
         User user = new User();
-        user.setId(3);
+        user.setId(6L);
+        user.setAge(27);
+        user.setEmail("test@163.com");
+        user.setName("foo");
         userMapper.insert(user);
-        User result = userMapper.selectById(3);
+        User result = userMapper.selectById(6L);
         assertEquals(user.getId(), result.getId());
         userMapper.delete(3);
     }

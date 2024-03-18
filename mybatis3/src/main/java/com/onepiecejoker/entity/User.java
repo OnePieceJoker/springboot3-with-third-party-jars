@@ -1,14 +1,13 @@
 package com.onepiecejoker.entity;
 
+import lombok.Data;
+
+@Data
 public class User {
-    private Integer id;   
+    private Long id;   
+    private String name;
+    private Integer age;
+    private String email;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getId() {
-        return id;
-    }
 }
 
