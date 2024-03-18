@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    # jdbcUrl: "jdbc:mysql://localhost:3306/test" # 如果是使用@Bean注解自定义DataSource的话，由于没有配置连接池的实际类型，则需要使用这个参数，因为spring-jdbc默认会使用Hikari连接池
+    url: "jdbc:mysql://localhost:3306/test"
+    username: root
+    password: 123
+    driver-class-name: "com.mysql.cj.jdbc.Driver"
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      data-source-properties:
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true

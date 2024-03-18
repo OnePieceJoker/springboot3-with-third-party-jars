@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+          <groupId>com.onepiecejoker</groupId>
+          <artifactId>springboot3-with-third-party-jars</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.onepiecejoker</groupId>
+    <artifactId>mybatis-plus</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+      <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.5</version>
+            <exclusions>
+                  <exclusion>
+                        <!--https://github.com/mybatis/spring/pull/865-->
+                        <!--该版本依赖的mybatis-spring存在问题：Invalid value type for attribute 'factoryBeanObjectType': java.lang.String-->
+                        <!--在mybatis-plus-boot-starter版本未更新前，通过单独引入修复版本来解决该问题-->
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis-spring</artifactId>
+                  </exclusion>
+            </exclusions>
+      </dependency>
+      <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>3.0.3</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-generator -->
+      <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.5.5</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity-engine-core -->
+      <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.3</version>
+      </dependency>
+
+
+
+      <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.3.0</version>
+      </dependency>
+    </dependencies>
+
+
+</project>
