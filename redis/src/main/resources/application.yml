@@ -16,3 +16,5 @@ spring:
   redis:
     redission:
       file: classpath:redission.yaml
+
+cache-type: redis
