@@ -17,6 +17,7 @@
 		<module>redis</module>
 		<module>mybatis3</module>
 		<module>mybatis-plus</module>
+		<module>state-machine</module>
 	</modules>
 	<name>demo</name>
 	<description>Demo project for Spring Boot3 with third party jars</description>
